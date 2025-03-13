@@ -218,7 +218,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if chosenName != ""{
             
-            var requestLocation = CLLocation(latitude: annotationLatitude, longitude: annotationLongitude)
+            let requestLocation = CLLocation(latitude: annotationLatitude, longitude: annotationLongitude)
             
             CLGeocoder().reverseGeocodeLocation(requestLocation){(placemarks, error) in
                 
